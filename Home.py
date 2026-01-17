@@ -38,40 +38,75 @@ st.markdown(
 # ===============================
 # TITLE + TỔNG QUAN ĐỀ TÀI
 # ===============================
-st.markdown('<h1 class="tongquan-title">TỔNG QUAN ĐỀ TÀI</h1>', unsafe_allow_html=True)
-# CSS căn giữa tiêu đề và tăng khoảng cách dưới
 st.markdown(
     """
     <style>
         .tongquan-title {
             text-align: center;
-            margin-bottom: 1.2rem;
+            margin-bottom: 0.4rem;
             margin-top: 0.5rem;
             letter-spacing: 2px;
+            font-size: 34px;
+            font-weight: 700;
+            text-transform: uppercase;   /* IN HOA */
         }
-        /* Nếu có hr hoặc st.write('---') thì margin-top vừa phải */
+
+        .detai-subtitle {
+            text-align: center;
+            font-size: 18px;
+            font-weight: 500;
+            color: #94a3b8;
+            margin-bottom: 1.4rem;
+            line-height: 1.6;
+        }
+
         hr, .stHorizontalRule {
             margin-top: 1.2rem !important;
         }
     </style>
+
+    <h1 class="tongquan-title">Tổng quan đề tài</h1>
+    <div class="detai-subtitle">
+        Ứng dụng học máy trong phân loại sức khỏe tài chính<br/>
+        và đánh giá tín nhiệm doanh nghiệp
+    </div>
     """,
     unsafe_allow_html=True
 )
+
 st.write("---")
+
 
 # ===============================
 # SECTION 1
 # ===============================
 st.header("1. Giới thiệu đề tài")
 
-st.markdown("""
-Đề tài hướng đến việc xây dựng một khung phân tích định lượng nhằm đánh giá sức khỏe tài chính
-của doanh nghiệp phi tài chính tại Việt Nam. Thay vì sử dụng trực tiếp các mô hình xếp hạng tín nhiệm
-truyền thống, nghiên cứu khai thác cấu trúc nội tại của dữ liệu tài chính để nhận diện các nhóm doanh nghiệp
-có đặc điểm tương đồng.
 
-Cách tiếp cận này giúp giảm phụ thuộc vào giả định chủ quan, đồng thời cho phép mở rộng mô hình
-theo thời gian và theo ngành.
+# ===============================
+# SECTION 1
+# ===============================
+
+st.markdown("""
+Trong bối cảnh thị trường tài chính Việt Nam ngày càng phát triển và mức độ cạnh tranh giữa
+các doanh nghiệp ngày càng gia tăng, việc đánh giá sức khỏe tài chính của doanh nghiệp phi tài chính
+đóng vai trò quan trọng đối với nhà đầu tư, tổ chức tín dụng và các chủ thể quản lý rủi ro.
+
+Các mô hình xếp hạng tín nhiệm truyền thống thường dựa trên hệ thống tiêu chí cố định kết hợp với
+đánh giá định tính của chuyên gia, do đó tồn tại hạn chế về tính chủ quan và khả năng phản ánh đầy đủ
+sự đa dạng trong cấu trúc tài chính của doanh nghiệp. Trong khi đó, sự phát triển của các phương pháp
+học máy (Machine Learning) cho phép khai thác dữ liệu tài chính ở mức độ sâu hơn, thông qua việc
+nhận diện các mẫu hình và mối quan hệ tiềm ẩn trong dữ liệu.
+
+Xuất phát từ thực tiễn đó, đề tài hướng đến việc xây dựng một khung phân tích định lượng ứng dụng
+các thuật toán học máy không giám sát nhằm đánh giá sức khỏe tài chính của doanh nghiệp phi tài chính
+tại Việt Nam. Trên cơ sở dữ liệu báo cáo tài chính, các chỉ tiêu tài chính được chuẩn hóa và đưa vào
+mô hình phân cụm để nhóm các doanh nghiệp có đặc điểm tài chính tương đồng.
+
+Kết quả phân cụm từ mô hình học máy được diễn giải dưới góc độ kinh tế – tài chính, từ đó làm cơ sở
+quy đổi sang các mức tín nhiệm tương đối. Cách tiếp cận này giúp nâng cao tính khách quan, khả năng
+mở rộng và tính thích ứng của mô hình theo thời gian cũng như theo từng nhóm ngành, phục vụ cho
+phân tích đầu tư và công tác quản trị rủi ro.
 """)
 
 # ===============================
@@ -150,3 +185,4 @@ Trang Home cung cấp tổng quan dữ liệu, phương pháp và logic phân t�
 """,
     unsafe_allow_html=True
 )
+
